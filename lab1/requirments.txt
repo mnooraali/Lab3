@@ -1,0 +1,7 @@
+Using the react-copy-project in the repo https://github.com/AndrewNagyNemr/Mansoura-3month-2021/tree/master/react-app-copy
+- Create A custom Todo component 
+- It should accept title and details props
+- In the app component create array of objects representing Todos
+- Map over the array to render the todos
+
+Please create your own repo to deliver the whole labs
