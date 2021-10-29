@@ -12,10 +12,10 @@ export const AddPost = (props) => {
 
   return (
     <div className="card p-3 m-2" style={{ height: "95vh" }}>
-      <h1>Add Post</h1>
+      <h1>Add Todo</h1>
 
-      <Input value={title} setValue={setTitle} label="Title" />
-      <Input value={body} setValue={setBody} label="Body" />
+      <Input value={title} setValue={setTitle} label="Title" type="text" />
+      <Input value={body} setValue={setBody} label="Body" type="text" />
 
       <button onClick={handleSubmit} className="btn btn-primary">
         Add Post

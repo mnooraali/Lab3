@@ -2,6 +2,7 @@ export const Input = (props) => {
 
   const handleChange = (e) => {
     props.setValue(e.target.value);
+    console.log(e.target.value)
   };
 
   return (
@@ -12,7 +13,8 @@ export const Input = (props) => {
         </span>
       </div>
       <input
-        type="text"
+        type={props.type}
+        placeholder={props.placeholder}
         className="form-control"
         aria-label="Sizing example input"
         aria-describedby="inputGroup-sizing-lg"

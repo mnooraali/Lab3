@@ -4,6 +4,8 @@ import { Posts } from "./pages/Posts";
 import { UserDetails } from "./pages/UserDetails";
 import { Users } from "./pages/Users";
 import {Contactus} from "./pages/Contactus";
+import { Login } from "./components/Login";
+import {ProtectedRoute} from './components/Auth/ProtectedRoute'
 
 export const App = () => {
   return (
@@ -17,14 +19,17 @@ export const App = () => {
           <Route path="/users/:id">
             <UserDetails />
           </Route>
-          <Route path="/users">
+          <ProtectedRoute path="/users">
             <Users />
-          </Route>
+          </ProtectedRoute>
           <Route path="/contactus">
             <Contactus />
           </Route>
+          <Route path="/login">
+            <Login/>
+          </Route>
           <Route path="/">
-            <Redirect to="/posts" />
+            <Redirect to="/login" />
           </Route>
         </Switch>
       </div>

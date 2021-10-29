@@ -1,7 +1,16 @@
 import { users } from "./users";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+
 
 export const Users = () => {
+
+  const history = useHistory();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    history.replace("/login");
+  };
+
   return (
     <>
       <h1>Users-Page</h1>
@@ -27,6 +36,9 @@ export const Users = () => {
           ))}
         </tbody>
       </table>
+      <button className="btn btn-danger" onClick={handleLogout}>
+        Log-out
+      </button>
     </>
   );
 };
